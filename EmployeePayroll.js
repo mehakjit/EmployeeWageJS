@@ -1,23 +1,26 @@
-//Uc 2 Switch case
+//UC3 Function Employee Hours
 {
     const IS_PART_TIME = 1;
     const IS_Full_TIME = 2;
     const PART_TIME_HOURS = 4;
     const FULL_TIME_HOURS = 8;
     const WAGE_PER_HOUR=20;
-    let empHrs=0;
     let empCheck=Math.floor(Math.random() * 10)%3;
+    function getEmpHrs(){
     switch(empCheck){
         case IS_PART_TIME:
-            empHrs=PART_TIME_HOURS;
+            return PART_TIME_HOURS;
             break;
     
         case IS_Full_TIME:
-            empHrs=FULL_TIME_HOURS;
+            return FULL_TIME_HOURS;
             break;
         default:
-            empHrs=0;
+            return 0;
+        }
     }
+    let empHrs=getEmpHrs();
+    
     let empWage = empHrs*WAGE_PER_HOUR;
-    console.log("UC2- Emp Wage "+empWage);
+    console.log("UC3- Emp Wage "+empWage);
 }
